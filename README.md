@@ -238,8 +238,7 @@ GitHub:
 https://github.com/dhanushprathipati2007-create
 
 LinkedIn:
-(https://www.linkedin.com/in/dhanush
-prathipati07 )
+(https://www.linkedin.com/in/dhanushprathipati07 )
 ---
 
 # ⭐ If you like this project
