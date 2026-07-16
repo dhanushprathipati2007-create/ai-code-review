@@ -236,7 +236,7 @@ function ReviewResults() {
               <span className="section-eyebrow">
                 AI INSIGHTS
               </span>
-              <h2>AI Code Review</h2>
+              <h2>AI Analysis Report</h2>
             </div>
           </div>
 
@@ -249,8 +249,7 @@ function ReviewResults() {
                   Intelligent Code Analysis
                 </strong>
                 <p>
-                  AI-generated recommendations based
-                  on your source code.
+Powered by Google Gemini 2.5 Flash • Security • Performance • Maintainability • Best Practices
                 </p>
               </div>
             </div>
@@ -371,7 +370,7 @@ function ReviewResults() {
             <span className="section-eyebrow">
               STATIC ANALYSIS
             </span>
-            <h2>Code Findings</h2>
+            <h2>Static Analysis Findings</h2>
           </div>
 
           <span className="section-count">
@@ -522,7 +521,7 @@ function ReviewResults() {
             <span className="section-eyebrow">
               AUTO-GENERATED
             </span>
-            <h2>Generated Documentation</h2>
+            <h2>AI Generated Documentation</h2>
           </div>
         </div>
 

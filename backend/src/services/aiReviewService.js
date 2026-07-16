@@ -40,7 +40,7 @@ Be practical and concise. If no issue exists in a section, say:
 `;
 
   const response = await ai.models.generateContent({
-    model: "gemini-3.5-flash",
+    model: "gemini-2.5-flash",
     contents: prompt,
   });
 

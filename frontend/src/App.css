@@ -4984,3 +4984,168 @@ body.dark-theme .review-field input:-webkit-autofill:focus {
 .dark .markdown-body td {
   border-color: #374151;
 }
+
+/* =====================================
+   REVIEW RESULTS DARK MODE FIX
+===================================== */
+
+body.dark-theme .professional-results-page{
+    background:#080d17;
+    color:#e2e8f0;
+}
+
+/* Headings */
+
+body.dark-theme .professional-results-page h1,
+body.dark-theme .professional-results-page h2,
+body.dark-theme .professional-results-page h3,
+body.dark-theme .professional-results-page h4{
+    color:#f8fafc;
+}
+
+/* Paragraphs */
+
+body.dark-theme .professional-results-page p,
+body.dark-theme .professional-results-page span,
+body.dark-theme .professional-results-page small{
+    color:#cbd5e1;
+}
+
+/* Main Cards */
+
+body.dark-theme .report-header,
+body.dark-theme .report-content-card,
+body.dark-theme .professional-summary-card,
+body.dark-theme .professional-metric-card,
+body.dark-theme .professional-function-card,
+body.dark-theme .professional-documentation-card,
+body.dark-theme .professional-smell-card,
+body.dark-theme .professional-finding-card,
+body.dark-theme .professional-ai-review,
+body.dark-theme .documentation-group,
+body.dark-theme .professional-empty-state,
+body.dark-theme .success-empty-state{
+    background:#111827;
+    border:1px solid #263244;
+    color:#e2e8f0;
+}
+
+/* Report Header */
+
+body.dark-theme .page-eyebrow,
+body.dark-theme .section-eyebrow,
+body.dark-theme .section-count,
+body.dark-theme .report-header-meta{
+    color:#94a3b8;
+}
+
+body.dark-theme .report-score-panel{
+    background:#172033;
+    color:#fff;
+}
+
+body.dark-theme .report-score-panel strong{
+    color:#60a5fa;
+}
+
+/* Summary */
+
+body.dark-theme .professional-summary-card strong,
+body.dark-theme .professional-metric-card strong{
+    color:#ffffff;
+}
+
+body.dark-theme .professional-summary-card span,
+body.dark-theme .professional-metric-card span{
+    color:#94a3b8;
+}
+
+/* Findings */
+
+body.dark-theme .professional-finding-card h3,
+body.dark-theme .professional-smell-card h3,
+body.dark-theme .professional-documentation-card h3{
+    color:#fff;
+}
+
+body.dark-theme .professional-finding-card p,
+body.dark-theme .professional-smell-card p,
+body.dark-theme .professional-documentation-card p{
+    color:#cbd5e1;
+}
+
+/* Suggested Fix */
+
+body.dark-theme .professional-suggested-fix{
+    background:#0f172a;
+    border:1px solid #334155;
+}
+
+body.dark-theme .professional-suggested-fix span{
+    color:#60a5fa;
+}
+
+body.dark-theme .professional-suggested-fix p{
+    color:#cbd5e1;
+}
+
+/* Documentation */
+
+body.dark-theme .documentation-group-header{
+    border-color:#334155;
+}
+
+body.dark-theme .documentation-group-header h3{
+    color:#fff;
+}
+
+/* AI Review */
+
+body.dark-theme .ai-review-banner{
+    background:#172554;
+    border:1px solid #2563eb;
+}
+
+body.dark-theme .ai-review-banner strong{
+    color:#fff;
+}
+
+body.dark-theme .ai-review-content{
+    color:#dbeafe;
+}
+
+body.dark-theme .ai-review-content h1,
+body.dark-theme .ai-review-content h2,
+body.dark-theme .ai-review-content h3{
+    color:#fff;
+}
+
+body.dark-theme .ai-review-content strong{
+    color:#fff;
+}
+
+body.dark-theme .ai-review-content li{
+    color:#cbd5e1;
+}
+
+body.dark-theme .ai-review-content code{
+    background:#1e293b;
+    color:#93c5fd;
+}
+
+body.dark-theme .ai-review-content pre{
+    background:#020617;
+    border:1px solid #334155;
+}
+
+/* Empty states */
+
+body.dark-theme .professional-empty-state p,
+body.dark-theme .success-empty-state p{
+    color:#94a3b8;
+}
+
+body.dark-theme .professional-empty-state span,
+body.dark-theme .success-state-icon{
+    color:#22c55e;
+}

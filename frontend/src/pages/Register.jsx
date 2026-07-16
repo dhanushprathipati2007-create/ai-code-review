@@ -124,11 +124,10 @@ function Register() {
                 GET STARTED
               </span>
 
-              <h2>Create your account</h2>
+              <h2>Create your developer account</h2>
 
               <p>
-                Set up your workspace and start reviewing
-                code with AI.
+Create your CodeLens AI account and start analyzing your code with intelligent AI-powered reviews.
               </p>
             </div>
 
@@ -203,12 +202,12 @@ function Register() {
               >
                 {loading
                   ? "Creating account..."
-                  : "Create developer account"}
+                  : "Create Account"}
               </button>
             </form>
 
             <p className="auth-footer">
-              Already have an account?{" "}
+              Already a member?{" "}
               <Link to="/">Sign in</Link>
             </p>
           </div>

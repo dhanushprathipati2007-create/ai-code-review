@@ -122,11 +122,10 @@ function Login() {
                 WELCOME BACK
               </span>
 
-              <h2>Sign in to your account</h2>
+              <h2>Sign in to your CodeLens AI account</h2>
 
               <p>
-                Continue to your AI-powered code review
-                workspace.
+Continue to your secure developer workspace and review your code with AI-powered insights.
               </p>
             </div>
 
@@ -178,12 +177,12 @@ function Login() {
               >
                 {loading
                   ? "Signing in..."
-                  : "Sign in to workspace"}
+                  : "Sign in to account"}
               </button>
             </form>
 
             <p className="auth-footer">
-              New to AI Code Reviewer?{" "}
+              Don't have an account?{" "}
               <Link to="/register">
                 Create an account
               </Link>
