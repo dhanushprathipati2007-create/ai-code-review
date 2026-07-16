@@ -89,15 +89,15 @@ const analyzeComplexity = (language, sourceCode) => {
       additionalComplexity;
   }
 
-  let fileComplexity = "Low";
+let fileComplexity = 1;
 
-  if (cyclomaticComplexity > 10) {
-    fileComplexity = "Medium";
-  }
+if (cyclomaticComplexity > 10) {
+  fileComplexity = 2;
+}
 
-  if (cyclomaticComplexity > 20) {
-    fileComplexity = "High";
-  }
+if (cyclomaticComplexity > 20) {
+  fileComplexity = 3;
+}
 
   const codeSmells = [];
 
