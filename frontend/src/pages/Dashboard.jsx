@@ -23,7 +23,7 @@ function Dashboard() {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "http://localhost:5000/api/reviews/stats/dashboard",
+          "https://ai-code-review-1xi9.onrender.com/api/reviews/stats/dashboard",
           {
             headers: {
               Authorization: `Bearer ${token}`,
