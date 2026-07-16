@@ -46,14 +46,17 @@ function Header() {
       </div>
 
       <div className="header-actions">
-        <button
-          className="mobile-menu-btn"
-          onClick={toggleSidebar}
-          type="button"
-          aria-label="Open Menu"
-        >
-          ☰
-        </button>
+<button
+  className="mobile-menu-btn"
+  type="button"
+  onClick={() => {
+    document
+      .querySelector(".sidebar")
+      ?.classList.toggle("open");
+  }}
+>
+  ☰
+</button>
 
         <button
           className="theme-toggle"
