@@ -5149,3 +5149,238 @@ body.dark-theme .professional-empty-state span,
 body.dark-theme .success-state-icon{
     color:#22c55e;
 }
+
+/* =====================================================
+   FINAL DARK THEME + REVIEW RESULTS IMPROVEMENTS
+   Paste at the END of App.css
+===================================================== */
+
+/* ---------- Review Header ---------- */
+
+body.dark-theme .report-header{
+    padding:36px 42px;
+    background:#111827;
+    border:1px solid #263244;
+    border-radius:18px;
+}
+
+body.dark-theme .report-back-button{
+    margin-bottom:18px;
+    display:inline-flex;
+    align-items:center;
+    color:#94a3b8;
+}
+
+body.dark-theme .report-back-button:hover{
+    color:#60a5fa;
+}
+
+body.dark-theme .page-eyebrow{
+    display:block;
+    margin-top:10px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+    font-size:13px;
+    font-weight:700;
+    color:#60a5fa;
+}
+
+body.dark-theme .report-header h1{
+    margin:12px 0 18px;
+    font-size:48px;
+    line-height:1.2;
+    color:#f8fafc;
+}
+
+body.dark-theme .report-header-meta{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+body.dark-theme .report-score-panel{
+    padding:28px;
+    min-width:230px;
+    background:#182235;
+    border:1px solid #2c3b53;
+}
+
+body.dark-theme .report-section{
+    margin-top:42px;
+}
+
+body.dark-theme .report-section-heading{
+    margin-bottom:24px;
+}
+
+body.dark-theme .report-summary-card{
+    padding:32px;
+}
+
+body.dark-theme .professional-summary-card,
+body.dark-theme .professional-metric-card,
+body.dark-theme .professional-function-card,
+body.dark-theme .professional-smell-card,
+body.dark-theme .professional-documentation-card,
+body.dark-theme .professional-finding-card{
+    background:#111827;
+    border:1px solid #263244;
+    transition:.25s;
+}
+
+body.dark-theme .professional-summary-card:hover,
+body.dark-theme .professional-metric-card:hover,
+body.dark-theme .professional-function-card:hover,
+body.dark-theme .professional-smell-card:hover,
+body.dark-theme .professional-documentation-card:hover,
+body.dark-theme .professional-finding-card:hover{
+    transform:translateY(-2px);
+    border-color:#3b82f6;
+}
+
+body.dark-theme .professional-summary-card strong,
+body.dark-theme .professional-metric-card strong,
+body.dark-theme .professional-function-card strong,
+body.dark-theme .professional-documentation-card strong,
+body.dark-theme .professional-smell-card h3,
+body.dark-theme .professional-finding-card h3{
+    color:#ffffff;
+}
+
+body.dark-theme .professional-summary-card span,
+body.dark-theme .professional-metric-card span,
+body.dark-theme .professional-function-card span,
+body.dark-theme .professional-documentation-card p,
+body.dark-theme .professional-smell-card p,
+body.dark-theme .professional-finding-card p,
+body.dark-theme .line-number{
+    color:#cbd5e1;
+}
+
+/* ---------- AI Review ---------- */
+
+body.dark-theme .professional-ai-review{
+    background:#111827;
+    border:1px solid #263244;
+}
+
+body.dark-theme .ai-review-banner{
+    background:#172554;
+}
+
+body.dark-theme .ai-review-content{
+    color:#e2e8f0;
+}
+
+body.dark-theme .ai-review-content h1,
+body.dark-theme .ai-review-content h2,
+body.dark-theme .ai-review-content h3{
+    color:#ffffff;
+}
+
+body.dark-theme .ai-review-content p,
+body.dark-theme .ai-review-content li{
+    color:#cbd5e1;
+}
+
+body.dark-theme .ai-review-content strong{
+    color:#ffffff;
+}
+
+body.dark-theme .ai-review-content code{
+    background:#1e293b;
+    color:#ffffff;
+    padding:2px 6px;
+    border-radius:6px;
+}
+
+body.dark-theme .ai-review-content pre{
+    background:#020617;
+    border:1px solid #334155;
+}
+
+/* ---------- Login/Register ---------- */
+
+body.dark-theme .auth-page{
+    background:#080d17;
+}
+
+body.dark-theme .auth-brand{
+    background:linear-gradient(135deg,#0b1120,#172554);
+}
+
+body.dark-theme .auth-product-logo,
+body.dark-theme .auth-brand-footer,
+body.dark-theme .auth-feature,
+body.dark-theme .auth-hero-content p{
+    color:#cbd5e1;
+}
+
+body.dark-theme .auth-badge{
+    color:#60a5fa;
+    border-color:#3b82f6;
+}
+
+body.dark-theme .auth-hero-content h1,
+body.dark-theme .auth-hero-content span,
+body.dark-theme .auth-product-logo span{
+    color:#ffffff;
+}
+
+body.dark-theme .auth-form-section{
+    background:#080d17;
+}
+
+body.dark-theme .auth-card{
+    background:#111827;
+    border:1px solid #263244;
+}
+
+body.dark-theme .auth-card h2{
+    color:#ffffff;
+}
+
+body.dark-theme .auth-card p{
+    color:#cbd5e1;
+}
+
+body.dark-theme .auth-card-label{
+    color:#60a5fa;
+}
+
+body.dark-theme .form-group label{
+    color:#e2e8f0;
+}
+
+body.dark-theme .form-group input{
+    background:#0b1220;
+    border:1px solid #334155;
+    color:#ffffff;
+}
+
+body.dark-theme .form-group input::placeholder{
+    color:#94a3b8;
+}
+
+body.dark-theme .form-group input:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59,130,246,.25);
+}
+
+body.dark-theme .auth-footer{
+    color:#cbd5e1;
+}
+
+body.dark-theme .auth-footer a{
+    color:#60a5fa;
+}
+
+body.dark-theme .auth-button{
+    background:#2563eb;
+    color:#ffffff;
+}
+
+body.dark-theme .auth-button:hover{
+    background:#1d4ed8;
+}
