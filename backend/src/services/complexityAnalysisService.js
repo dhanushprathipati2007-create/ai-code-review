@@ -10,17 +10,23 @@ const analyzeComplexity = (language, sourceCode) => {
   // Cyclomatic complexity starts at 1
   let cyclomaticComplexity = 1;
 
-  const decisionPatterns = [
-    /\bif\b/g,
-    /\belse\s+if\b/g,
-    /\bfor\b/g,
-    /\bwhile\b/g,
-    /\bcase\b/g,
-    /\bcatch\b/g,
-    /&&/g,
-    /\|\|/g,
-  ];
-
+const decisionPatterns = [
+  /\bif\b/g,
+  /\belse\s+if\b/g,
+  /\bfor\b/g,
+  /\bwhile\b/g,
+  /\bcase\b/g,
+  /\bcatch\b/g,
+  /\bswitch\b/g,
+  /\btry\b/g,
+  /\bthrow\b/g,
+  /\breturn\b/g,
+  /\bcontinue\b/g,
+  /\bbreak\b/g,
+  /&&/g,
+  /\|\|/g,
+  /\?/g,
+];
   decisionPatterns.forEach((pattern) => {
     const matches = sourceCode.match(pattern);
 
@@ -30,35 +36,22 @@ const analyzeComplexity = (language, sourceCode) => {
   });
 
   // Detect functions
-  let functionMatches = [];
+// Detect functions (JavaScript, TypeScript, Python, Java, C, C++)
+const patterns = [
+  /function\s+([a-zA-Z_$][\w$]*)\s*\(/g,
 
-  if (
-    language.toLowerCase() === "python" ||
-    language.toLowerCase() === "py"
-  ) {
-    functionMatches = [
-      ...sourceCode.matchAll(
-        /def\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\([^)]*\)\s*:/g
-      ),
-    ];
-  } else {
-    const normalFunctions = [
-      ...sourceCode.matchAll(
-        /function\s+([a-zA-Z_$][\w$]*)\s*\([^)]*\)/g
-      ),
-    ];
+  /(?:const|let|var)\s+([a-zA-Z_$][\w$]*)\s*=\s*(?:async\s*)?\([^)]*\)\s*=>/g,
 
-    const arrowFunctions = [
-      ...sourceCode.matchAll(
-        /(?:const|let|var)\s+([a-zA-Z_$][\w$]*)\s*=\s*(?:async\s*)?\([^)]*\)\s*=>/g
-      ),
-    ];
+  /def\s+([a-zA-Z_]\w*)\s*\(/g,
 
-    functionMatches = [
-      ...normalFunctions,
-      ...arrowFunctions,
-    ];
-  }
+  /(?:public|private|protected)?\s*(?:static\s+)?[\w<>]+\s+([a-zA-Z_]\w*)\s*\(/g,
+];
+
+let functionMatches = [];
+
+patterns.forEach((pattern) => {
+  functionMatches.push(...sourceCode.matchAll(pattern));
+});
 
   const numberOfFunctions = functionMatches.length;
 
@@ -97,7 +90,7 @@ if (cyclomaticComplexity > 10) {
 
 if (cyclomaticComplexity > 20) {
   fileComplexity = 3;
-}
+} 
 
   const codeSmells = [];
 

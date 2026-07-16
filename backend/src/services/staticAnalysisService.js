@@ -118,26 +118,145 @@ const analyzePython = async (sourceCode) => {
   }
 };
 
+const analyzeTypeScript = async (sourceCode) => {
+  const findings = [];
+
+  if (sourceCode.includes("any")) {
+    findings.push({
+      severity: "warning",
+      issue: "Avoid using any",
+      explanation: "Using 'any' removes TypeScript type safety.",
+      suggestedFix: "Use proper interfaces or types.",
+      fileName: "code.ts",
+      lineNumber: null,
+    });
+  }
+
+  return findings;
+};
+
+const analyzeJava = async (sourceCode) => {
+  const findings = [];
+
+  if (sourceCode.includes("System.out.println")) {
+    findings.push({
+      severity: "warning",
+      issue: "Console Logging",
+      explanation:
+        "Avoid using System.out.println in production code.",
+      suggestedFix: "Use a logging framework like SLF4J.",
+      fileName: "code.java",
+      lineNumber: null,
+    });
+  }
+
+  if (sourceCode.includes("catch(Exception")) {
+    findings.push({
+      severity: "warning",
+      issue: "Generic Exception",
+      explanation:
+        "Catching generic Exception hides specific errors.",
+      suggestedFix:
+        "Catch specific exception types.",
+      fileName: "code.java",
+      lineNumber: null,
+    });
+  }
+
+  return findings;
+};
+
+const analyzeC = async (sourceCode) => {
+  const findings = [];
+
+  if (sourceCode.includes("gets(")) {
+    findings.push({
+      severity: "error",
+      issue: "Unsafe Function",
+      explanation:
+        "gets() may cause buffer overflow.",
+      suggestedFix: "Use fgets() instead.",
+      fileName: "code.c",
+      lineNumber: null,
+    });
+  }
+
+  if (sourceCode.includes("strcpy(")) {
+    findings.push({
+      severity: "warning",
+      issue: "Unsafe Copy",
+      explanation:
+        "strcpy() may overflow destination buffer.",
+      suggestedFix: "Use strncpy().",
+      fileName: "code.c",
+      lineNumber: null,
+    });
+  }
+
+  return findings;
+};
+
+const analyzeCpp = async (sourceCode) => {
+  const findings = [];
+
+  if (sourceCode.includes("new ")) {
+    findings.push({
+      severity: "warning",
+      issue: "Manual Memory Allocation",
+      explanation:
+        "Raw pointers can cause memory leaks.",
+      suggestedFix:
+        "Use std::unique_ptr or std::shared_ptr.",
+      fileName: "code.cpp",
+      lineNumber: null,
+    });
+  }
+
+  if (sourceCode.includes("using namespace std")) {
+    findings.push({
+      severity: "info",
+      issue: "Namespace Pollution",
+      explanation:
+        "Avoid using namespace std in headers or large projects.",
+      suggestedFix:
+        "Use std:: prefix instead.",
+      fileName: "code.cpp",
+      lineNumber: null,
+    });
+  }
+
+  return findings;
+};
+
 const runStaticAnalysis = async (language, sourceCode) => {
   const normalizedLanguage = language.toLowerCase();
 
-  if (
-    normalizedLanguage === "javascript" ||
-    normalizedLanguage === "js"
-  ) {
-    return analyzeJavaScript(sourceCode);
-  }
+  switch (normalizedLanguage) {
+    case "javascript":
+    case "js":
+      return analyzeJavaScript(sourceCode);
 
-  if (
-    normalizedLanguage === "python" ||
-    normalizedLanguage === "py"
-  ) {
-    return analyzePython(sourceCode);
-  }
+    case "typescript":
+    case "ts":
+      return analyzeTypeScript(sourceCode);
 
-  throw new Error(
-    `Static analysis is not supported for ${language}`
-  );
+    case "python":
+    case "py":
+      return analyzePython(sourceCode);
+
+    case "java":
+      return analyzeJava(sourceCode);
+
+    case "c":
+      return analyzeC(sourceCode);
+
+    case "cpp":
+    case "c++":
+      return analyzeCpp(sourceCode);
+
+    default:
+      return [];
+  }
 };
 
 module.exports = {

@@ -4833,3 +4833,154 @@ body.dark-theme .review-field input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px #0b1220 inset !important;
   -webkit-text-fill-color: #f8fafc !important;
 }
+
+/* ===========================
+   GLOBAL DARK MODE FIX
+=========================== */
+
+.dark {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.dark body,
+.dark #root,
+.dark .app {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* All white containers */
+
+.dark .card,
+.dark .review-card,
+.dark .result-card,
+.dark .analysis-card,
+.dark .dashboard-card,
+.dark .login-card,
+.dark .auth-card,
+.dark .hero-card,
+.dark .panel,
+.dark .content-card {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155;
+}
+
+/* Inputs */
+
+.dark input,
+.dark textarea,
+.dark select {
+  background: #0f172a;
+  color: #fff;
+  border: 1px solid #334155;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Buttons */
+
+.dark button {
+  color: white;
+}
+
+/* Code blocks */
+
+.dark pre,
+.dark code {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+/* AI review sections */
+
+.dark .review-section,
+.dark .report-section,
+.dark .markdown-body {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+/* Tables */
+
+.dark table {
+  background: #1e293b;
+  color: white;
+}
+
+.dark th {
+  background: #334155;
+}
+
+.dark td {
+  border-color: #475569;
+}
+
+/* Links */
+
+.dark a {
+  color: #60a5fa;
+}
+
+/* ==============================
+   Dark Theme Review Details
+============================== */
+
+.dark .review-details,
+.dark .review-content,
+.dark .review-card,
+.dark .markdown-body {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.dark .markdown-body h1,
+.dark .markdown-body h2,
+.dark .markdown-body h3,
+.dark .markdown-body h4,
+.dark .markdown-body h5,
+.dark .markdown-body h6 {
+  color: #ffffff;
+}
+
+.dark .markdown-body p,
+.dark .markdown-body li,
+.dark .markdown-body span {
+  color: #e5e7eb;
+}
+
+.dark .markdown-body code {
+  background: #1f2937;
+  color: #60a5fa;
+}
+
+.dark .markdown-body pre {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #374151;
+}
+
+.dark .markdown-body strong {
+  color: #ffffff;
+}
+
+.dark .markdown-body blockquote {
+  border-left: 4px solid #3b82f6;
+  color: #d1d5db;
+}
+
+.dark .markdown-body table {
+  color: #f8fafc;
+}
+
+.dark .markdown-body th {
+  background: #1e293b;
+}
+
+.dark .markdown-body td {
+  border-color: #374151;
+}
