@@ -220,10 +220,15 @@ if (sourceCode.length > 500000) {
   } catch (error) {
     await client.query("ROLLBACK");
 
-    console.error(
-      "Code Review Error:",
-      error
-    );
+console.error("========== DATABASE ERROR ==========");
+console.error("Message:", error.message);
+console.error("Code:", error.code);
+console.error("Detail:", error.detail);
+console.error("Hint:", error.hint);
+console.error("Position:", error.position);
+console.error("Where:", error.where);
+console.error(error);
+console.error("====================================");
 
     res.status(500).json({
       message:
