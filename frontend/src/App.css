@@ -5490,3 +5490,222 @@ body.dark-theme .auth-button:hover{
     display: none;
   }
 }
+
+/* ======================================================
+   MOBILE RESPONSIVE FIXES
+   PASTE AT THE VERY END OF APP.CSS
+====================================================== */
+
+/* Hide mobile menu on desktop */
+.mobile-menu-btn {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .app-layout {
+    display: block;
+  }
+
+  .main-area {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .page-content {
+    padding: 18px;
+  }
+
+  /* Header */
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .header-title {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .header-title h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .header-title p {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .header-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Menu Button */
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  body.dark-theme .mobile-menu-btn {
+    background: #111827;
+    color: white;
+    border-color: #374151;
+  }
+
+  /* Sidebar */
+
+  .sidebar {
+    position: fixed;
+    left: -270px;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    z-index: 1001;
+    transition: left .3s ease;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Overlay */
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 1000;
+  }
+
+  .sidebar.open ~ .sidebar-overlay {
+    display: block;
+  }
+
+  /* Dashboard */
+
+  .stats-grid,
+  .dashboard-grid,
+  .action-grid,
+  .professional-summary-grid,
+  .professional-complexity-grid,
+  .professional-documentation-grid,
+  .professional-smells-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards */
+
+  .review-form,
+  .upload-card,
+  .professional-history-card,
+  .professional-documentation-card,
+  .professional-finding-card,
+  .professional-smell-card {
+    width: 100%;
+  }
+
+  /* Report */
+
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-score-panel {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  /* History Toolbar */
+
+  .history-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .history-toolbar input,
+  .history-toolbar select,
+  .history-toolbar button {
+    width: 100%;
+  }
+
+  /* Auth */
+
+  .auth-page {
+    display: block;
+  }
+
+  .auth-brand {
+    display: none;
+  }
+
+  .auth-form-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .auth-card {
+    width: 100%;
+  }
+
+  /* Images */
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+/* Desktop */
+
+@media (min-width:769px) {
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+
+}
